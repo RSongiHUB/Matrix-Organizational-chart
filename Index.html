@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrix - Organization Chart</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">M</div>
+      <div>
+        <h1>Matrix Organization Chart</h1>
+        <p id="count">Loading...</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input id="search" type="text" placeholder="Search name, title, email...">
+      </div>
+      <button class="btn" onclick="zoomIn()">+</button>
+      <button class="btn" onclick="zoomOut()">−</button>
+      <button class="btn" onclick="resetView()">Reset</button>
+      <button class="btn primary" onclick="expandAll()">Expand All</button>
+    </div>
+  </header>
+
+  <main class="canvas" id="canvas">
+    <div class="tree" id="tree"></div>
+  </main>
+
+  <div class="legend">
+    <span><i class="dot blue"></i> Director</span>
+    <span><i class="dot green"></i> HOD</span>
+    <span><i class="dot orange"></i> Manager</span>
+    <span><i class="dot grey"></i> Team Member</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
